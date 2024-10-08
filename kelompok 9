@@ -19,3 +19,19 @@ cout << "2 - Kertas" << endl;
 cout << "Masukkan Pilihan Anda (0/1/2) : ";
 cin >> pemain;
 
+while (pemain < 0 || pemain > 2){
+    cout << "Pilihan tidak valid, silahkan masukkan 0, 1, atau 2: ";
+    cin >> pemain;
+}
+
+cout << "Pilihan Komputer: " << komputer << endl;
+cout << "Pilihan Anda" << pemain << endl;
+
+//Menentukan Pemanang
+if (pemain == komputer){
+    cout << "Hasil Seri!" << endl;
+} else if ((pemain == 0 && komputer == 1) || (pemain == 1 & komputer == 2) || (pemain == 2 && komputer == 0)){
+    cout << "Selamat! Anda Menang" << endl;
+} else {
+    cout << "Sayang sekali, Anda kalah..." << endl;
+} 
